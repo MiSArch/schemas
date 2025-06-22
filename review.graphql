@@ -78,7 +78,7 @@ type Product @key(fields: "id") {
     orderBy: ReviewOrderInput
   ): ReviewConnection!
   """Retrieves average rating of product."""
-  averageRating: Float!
+  averageRating: Float
 }
 
 type ProductVariant @key(fields: "id") {
@@ -94,7 +94,7 @@ type ProductVariant @key(fields: "id") {
     orderBy: ReviewOrderInput
   ): ReviewConnection!
   """Retrieves average rating of product variant."""
-  averageRating: Float!
+  averageRating: Float
 }
 
 type Query {
@@ -111,7 +111,7 @@ type Query {
   review(
     """UUID of review to retrieve."""
     id: UUID!
-  ): Review!
+  ): Review
   _entities(representations: [_Any!]!): [_Entity]!
 }
 
